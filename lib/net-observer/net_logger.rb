@@ -1,3 +1,5 @@
+require "net-observer/base"
+
 module NetObserver
 	class NetLogger
 		def initialize(logger)
