@@ -1,12 +1,8 @@
 #!/usr/bin/env ruby
 require 'test_helper'
-require "net/http"
-require "uri"
 require "logger"
-require "fakeweb"
 
 require "net-observer"
-
 
 class BasicTest < Test::Unit::TestCase
   def setup
