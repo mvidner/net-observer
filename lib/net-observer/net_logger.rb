@@ -8,7 +8,12 @@ module NetObserver
 		end
 
 		def update(type, request, body)
-			@logger.info "get #{type}: #{request.inspect} with body #{body}"
+			case type
+			when :response
+				@logger.info "get response: #{request.inspect} with body #{body}"
+			when :request
+				@logger.info "get request for url #{request.path} with method: #{request.method} with body #{request.body || body}"
+			end
 		end
 	end
 end
