@@ -1,3 +1,7 @@
+require "observer"
+require "singleton"
+require "net/http-ext"
+
 module NetObserver
 	class Base
   	include Observable
