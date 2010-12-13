@@ -3,8 +3,10 @@ require 'test_helper'
 require "net/http"
 require "uri"
 require "logger"
+require "fakeweb"
 
 require "net-observer/net_logger"
+
 
 class BasicTest < Test::Unit::TestCase
   def setup
@@ -18,6 +20,6 @@ class BasicTest < Test::Unit::TestCase
     register_fake_response :get, "http://www.google.com/search?q=wikipedia",
                            "wikipedia"
 
-    Net::HTTP.get URI.parse("http://www.google.com/search?q=wikipedia")
+    Net::HTTP.get URI.parse("http://google.com/search?q=wikipedia")
   end
 end
