@@ -1,7 +1,7 @@
 module NetObserver
 	class NetLogger
 		def initialize(logger)
-			@logger.logger
+			@logger = logger
 			Base.instance.add_observer(self)
 		end
 

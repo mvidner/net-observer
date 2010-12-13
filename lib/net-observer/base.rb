@@ -8,9 +8,10 @@ module NetObserver
 			notify_observers(:request,request,body) 
 		end
 
-		def request_data(request,body)
+		def response_data(response)
 			changed
-			notify_observers(:response,request,body) 
+			body = response.respond_to?(:body) ? response.body : ""
+			notify_observers(:response,response,body) 
 		end
 	end
 end
