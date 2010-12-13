@@ -17,7 +17,7 @@ class BasicTest < Test::Unit::TestCase
     log = Logger.new(STDOUT)
     net_logger = NetObserver::NetLogger.new log
 
-    register_fake_response :get, "http://www.google.com/search?q=wikipedia",
+    register_fake_response :get, "http://google.com/search?q=wikipedia",
                            "wikipedia"
 
     Net::HTTP.get URI.parse("http://google.com/search?q=wikipedia")
