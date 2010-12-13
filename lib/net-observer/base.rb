@@ -1,6 +1,6 @@
 require "observer"
 require "singleton"
-require "net/http-ext"
+require "core-ext/net/http"
 
 module NetObserver
 	class Base

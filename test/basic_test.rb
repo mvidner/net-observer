@@ -5,7 +5,7 @@ require "uri"
 require "logger"
 require "fakeweb"
 
-require "net-observer/net_logger"
+require "net-observer"
 
 
 class BasicTest < Test::Unit::TestCase
