@@ -46,7 +46,7 @@ begin
     gem.email   = %w(flavio@castelli.name jreidinger@suse.cz mvidner@suse.cz)
     gem.homepage = "http://github.com/mvidner/net-observer"
 
-    gem.add_development_dependency "fakefs"
+    gem.add_development_dependency "fakeweb"
 
     gem.platform = Gem::Platform::RUBY
   end
