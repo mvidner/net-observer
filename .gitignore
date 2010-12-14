@@ -1,0 +1,4 @@
+.yardoc
+doc/
+net-observer.gemspec
+pkg/

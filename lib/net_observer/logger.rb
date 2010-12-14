@@ -1,7 +1,7 @@
 require "net_observer/base"
 
 module NetObserver
-	class NetLogger
+	class Logger
 		def initialize(logger)
 			@logger = logger
 			Base.instance.add_observer(self)
@@ -13,7 +13,9 @@ module NetObserver
 				method = request.kind_of?(Net::HTTPSuccess) ? :info : :warn
 				@logger.send method, "get response: #{request.inspect} with body #{body}"
 			when :request
-				url = "#{connection.use_ssl? ? "https" : "http"}://#{connection.address}:#{connection.port}"
+				port = ""
+				port = ":#{connection.port}" if (connection.port.to_i != (connection.use_ssl? ? 443 : 80))
+				url = "#{connection.use_ssl? ? "https" : "http"}://#{connection.address}#{port}"
 				@logger.info "get request for url #{url}#{request.path} with method: #{request.method} with body #{request.body || body}"
 			end
 		end

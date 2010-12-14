@@ -13,7 +13,7 @@ class BasicTest < Test::Unit::TestCase
     url = "http://google.com/search?q=wikipedia"
     uri = URI.parse url
     log = Logger.new(STDOUT)
-    net_logger = NetObserver::NetLogger.new log
+    net_logger = NetObserver::Logger.new log
 
     reply = File.read(File.join( File.dirname(__FILE__), "mocked_responses", "wikipedia"))
     html_body = reply[reply.index("<html>")..reply.size]
