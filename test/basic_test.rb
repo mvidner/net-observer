@@ -9,7 +9,7 @@ class BasicTest < Test::Unit::TestCase
     FakeWeb.allow_net_connect = false
   end
 
-  def test_it_by_watching
+  def test_simple_request
     url = "http://google.com/search?q=wikipedia"
     log = Logger.new(STDOUT)
     net_logger = NetObserver::Logger.new log
