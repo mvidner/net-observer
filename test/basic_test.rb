@@ -11,7 +11,7 @@ class BasicTest < Test::Unit::TestCase
 
   def test_it_by_watching
     log = Logger.new(STDOUT)
-    net_logger = NetObserver::NetLogger.new log
+    net_logger = NetObserver::Logger.new log
 
     register_fake_response :get, "http://google.com/search?q=wikipedia",
                            "wikipedia"
