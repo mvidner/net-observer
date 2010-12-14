@@ -7,13 +7,13 @@ module Net
 
     def request(req, body = nil, &block)  # :yield: +response+
       begin
-        NetObserver::Base.instance.request_data(req, body)
+        NetObserver::Base.instance.request_data(self, req, body)
         res = orig_request req, body, &block
       rescue => e
         puts "something went wrong: #{e.message}"
         raise e
       end
-      NetObserver::Base.instance.response_data(res)
+      NetObserver::Base.instance.response_data(self, res)
       res
     end
   end
