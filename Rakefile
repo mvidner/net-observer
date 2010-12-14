@@ -1,4 +1,4 @@
-require 'rake'
+require 'rake'		# emacs: -*- ruby -*-
 require 'rake/rdoctask'
 require 'rake/testtask'
 
@@ -43,7 +43,7 @@ begin
     gem.extra_rdoc_files = ["README.rdoc"]
     gem.rdoc_options = ['--line-numbers', "--main", "README.rdoc"]
 
-    gem.authors = ["Flavio Castelli", "Josef Reidinger" "Martin Vidner"]
+    gem.authors = ["Flavio Castelli", "Josef Reidinger", "Martin Vidner"]
     gem.email   = %w(flavio@castelli.name jreidinger@suse.cz mvidner@suse.cz)
     gem.homepage = "http://github.com/mvidner/net-observer"
 
