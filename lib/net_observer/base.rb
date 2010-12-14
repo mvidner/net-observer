@@ -9,13 +9,13 @@ module NetObserver
 
 		def request_data(connection, request,body)
 			changed
-			notify_observers(:request,request,body, connection) 
+			notify_observers(:request,request,body, connection)
 		end
 
 		def response_data(connection, response)
 			changed
 			body = response.respond_to?(:body) ? response.body : ""
-			notify_observers(:response,response,body, connection) 
+			notify_observers(:response,response,body, connection)
 		end
 	end
 end
