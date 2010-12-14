@@ -2,7 +2,7 @@
 require 'test_helper'
 require "logger"
 
-require "net-observer"
+require "net_observer"
 
 class BasicTest < Test::Unit::TestCase
   def setup

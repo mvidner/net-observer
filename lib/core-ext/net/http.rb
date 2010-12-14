@@ -1,4 +1,4 @@
-require 'net-observer/base'
+require 'net_observer/base'
 require 'net/http'
 
 module Net
