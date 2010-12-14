@@ -11,13 +11,12 @@ class BasicTest < Test::Unit::TestCase
 
   def test_it_by_watching
     url = "http://google.com/search?q=wikipedia"
-    uri = URI.parse url
     log = Logger.new(STDOUT)
     net_logger = NetObserver::Logger.new log
 
     reply = File.read(File.join( File.dirname(__FILE__), "mocked_responses", "wikipedia"))
     html_body = reply[reply.index("<html>")..reply.size]
-    log.expects(:info).with(regexp_matches(/get request for url http?:\/\/#{uri.host}:#{uri.port}#{uri.path}\?#{uri.query} with method: GET with body /)).once
+    log.expects(:info).with("get request for url #{url} with method: GET with body ").once
     
     # make sure response contents are printed too
     log.expects(:warn).with(includes(html_body)).once
