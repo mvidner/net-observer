@@ -40,8 +40,8 @@ begin
     gem.test_files   = Dir[*['test/**/*_test.rb']]
 
     gem.has_rdoc         = true
-    gem.extra_rdoc_files = ["README.rdoc"]
-    gem.rdoc_options = ['--line-numbers', "--main", "README.rdoc"]
+    gem.extra_rdoc_files = ["README.md"]
+    gem.rdoc_options = ['--line-numbers', "--main", "README.md"]
 
     gem.authors = ["Flavio Castelli", "Josef Reidinger", "Martin Vidner"]
     gem.email   = %w(flavio@castelli.name jreidinger@suse.cz mvidner@suse.cz)
