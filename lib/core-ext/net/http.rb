@@ -7,6 +7,7 @@ module Net
 
 		# hook into net code to get request and response for it
     def request(req, body = nil, &block)  # :yield: +response+
+      return orig_request req, body, &block unless started? #if not started don't log twice
       NetObserver::Base.instance.request_data(self, req, body)
       res = orig_request req, body, &block
       NetObserver::Base.instance.response_data(self, res)
