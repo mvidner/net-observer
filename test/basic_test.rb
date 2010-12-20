@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require 'rubygems'
 require 'mocha'
-require 'test_helper'
+require File.join File.dirname(__FILE__),'test_helper'
 require "logger"
 require "net_observer"
 
