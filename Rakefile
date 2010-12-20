@@ -31,9 +31,9 @@ end
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name        = %q{net-observer}
-    gem.summary     = %q{Fancy summary}
-    gem.description = %q{Fancy description.}
+    gem.name        = %q{net_observer}
+    gem.summary     = %q{Gem allow easy observation of network communication in ruby via ruby network library}
+    gem.description = %q{Gem allow easy observation of network communication in ruby via ruby network library. It is useful to log low level information for abstract layers like ActiveResource. It contain predefined observers for logging and to remember last request.}
 
     gem.files        = FileList['[A-Z]*', 'lib/**/*.rb', 'test/**/*.rb']
     gem.require_path = 'lib'
