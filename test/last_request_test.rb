@@ -23,4 +23,25 @@ class LastRequestTest < Test::Unit::TestCase
 			assert_equal url, site+last_request[:request].path
     end
   end
+
+  def test_stop_catching_request
+    assert_nothing_raised do
+      url = "http://google.com/search?q=wikipedia"
+			NetObserver::LastRequest.instance.enable
+
+      register_fake_response :get, url , "wikipedia"
+
+      Net::HTTP.get URI.parse(url)
+
+			last_request = NetObserver::LastRequest.instance.last_request
+			assert_not_nil last_request
+
+      NetObserver::LastRequest.instance.disable
+      Net::HTTP.get URI.parse(url)
+			last_request = NetObserver::LastRequest.instance.last_request
+			assert_nil last_request
+
+    end
+  end
+	
 end

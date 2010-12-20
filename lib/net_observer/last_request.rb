@@ -20,7 +20,7 @@ module NetObserver
 
 		def disable
 			@last_request = nil
-			Base.instance.remove_observer(self)
+			Base.instance.delete_observer(self)
 		end
 # methods to receive information about connection. Needed to allow itself to register agains Base
 # @see NetObserver::Base for parameters details
