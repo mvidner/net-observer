@@ -46,8 +46,9 @@ begin
     gem.authors = ["Flavio Castelli", "Josef Reidinger", "Martin Vidner"]
     gem.email   = %w(flavio@castelli.name jreidinger@suse.cz mvidner@suse.cz)
     gem.homepage = "http://github.com/mvidner/net-observer"
-
+    
     gem.add_development_dependency "fakeweb"
+    gem.add_development_dependency "yard"
 
     gem.platform = Gem::Platform::RUBY
   end
