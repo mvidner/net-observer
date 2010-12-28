@@ -28,6 +28,7 @@ class BasicTest < Test::Unit::TestCase
       register_fake_response :get, url , "wikipedia"
 
       Net::HTTP.get URI.parse(url)
+      net_logger.detach
     end
   end
 end

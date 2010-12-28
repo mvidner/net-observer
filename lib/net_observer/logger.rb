@@ -29,5 +29,10 @@ module NetObserver
 				@logger.info "get request for url #{url}#{request.path} with method: #{request.method} with body #{request.body || body}"
 			end
 		end
+
+# Detaches logger from network logging
+    def detach
+      Base.instance.delete_observer self
+    end
 	end
 end
