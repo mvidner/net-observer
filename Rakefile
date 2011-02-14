@@ -42,6 +42,7 @@ begin
     gem.has_rdoc         = true
     gem.extra_rdoc_files = ["README.md"]
     gem.rdoc_options = ['--line-numbers', "--main", "README.md"]
+    gem.license = "MIT"
 
     gem.authors = ["Flavio Castelli", "Josef Reidinger", "Martin Vidner"]
     gem.email   = %w(flavio@castelli.name jreidinger@suse.cz mvidner@suse.cz)
