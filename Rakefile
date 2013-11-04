@@ -1,5 +1,5 @@
 require 'rake'		# emacs: -*- ruby -*-
-require 'rake/rdoctask'
+require 'rdoc/task'
 require 'rake/testtask'
 
 
